@@ -1,0 +1,1576 @@
+/* =========================================================
+   ESENCIA Y ENCANTO
+   Estilo general
+   Diseño elegante, femenino y profesional
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+  /* Fondos */
+  --bg: #fffafc;
+  --bg-soft: #fff7fa;
+  --white: #ffffff;
+
+  /* Rosados */
+  --rose-1: #f8eaf0;
+  --rose-2: #ffd6e8;
+
+  /* Textos */
+  --text: #4a2d2f;
+  --muted: #7a5a5b;
+
+  /* Dorados */
+  --gold: #c69c6d;
+  --gold-dark: #a98258;
+
+  /* Elementos */
+  --card-bg: #ffffff;
+  --glass: rgba(255, 255, 255, 0.94);
+
+  /* Layout */
+  --container: 1200px;
+  --radius: 18px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--bg),
+      #ffffff
+    );
+
+  color: var(--text);
+
+  line-height: 1.45;
+
+  -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* =========================================================
+   SELECCIÓN DE TEXTO
+========================================================= */
+
+::selection {
+  background: var(--rose-2);
+  color: var(--text);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+  max-width: var(--container);
+
+  margin: 0 auto;
+
+  padding:
+    0 32px;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 50;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom:
+    1px solid rgba(74, 45, 47, 0.08);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.header-container {
+
+  min-height: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 65px;
+
+}
+
+
+/* =========================================================
+   NOMBRE DE LA MARCA
+========================================================= */
+
+.logo {
+
+  display: inline-block;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 37px;
+
+  font-weight: 700;
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  letter-spacing: 1.8px;
+
+  white-space: nowrap;
+
+  line-height: 1;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+
+}
+
+
+.logo:hover {
+
+  color: var(--gold);
+
+  transform:
+    translateY(-1px);
+
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+.nav {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  flex: 1;
+
+  gap: 27px;
+
+  white-space: nowrap;
+
+}
+
+
+.nav a {
+
+  position: relative;
+
+  text-decoration: none;
+
+  color: var(--muted);
+
+  font-weight: 500;
+
+  font-size: 15px;
+
+  letter-spacing: 0.2px;
+
+  padding:
+    8px 0;
+
+  transition:
+    color 0.3s ease;
+
+}
+
+
+/* Línea dorada debajo del menú */
+
+.nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -3px;
+
+  width: 0;
+
+  height: 2px;
+
+  background:
+    var(--gold);
+
+  transform:
+    translateX(-50%);
+
+  transition:
+    width 0.3s ease;
+
+}
+
+
+.nav a:hover {
+
+  color:
+    var(--gold);
+
+}
+
+
+.nav a:hover::after {
+
+  width: 100%;
+
+}
+
+
+/* Elemento activo */
+
+.nav a.active {
+
+  color:
+    var(--gold);
+
+}
+
+
+.nav a.active::after {
+
+  width: 100%;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+  padding:
+    115px 0 135px;
+
+}
+
+
+.hero-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 440px;
+
+  gap: 75px;
+
+  align-items: center;
+
+}
+
+
+.hero-content {
+
+  max-width: 620px;
+
+}
+
+
+/* Texto pequeño superior */
+
+.hero-tag {
+
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color:
+    var(--gold);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+}
+
+
+/* Título principal */
+
+.hero-content h1 {
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 50px;
+
+  line-height: 1.15;
+
+  margin-bottom: 25px;
+
+  color:
+    var(--text);
+
+  letter-spacing: -0.5px;
+
+}
+
+
+/* Descripción */
+
+.hero-content p {
+
+  margin-bottom: 32px;
+
+  color:
+    var(--muted);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  max-width: 540px;
+
+}
+
+
+/* Imagen principal */
+
+.hero-image img {
+
+  width: 100%;
+
+  display: block;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(74, 45, 47, 0.14);
+
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+========================================================= */
+
+.btn-primary {
+
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      #d9b77a
+    );
+
+  color:
+    white;
+
+  padding:
+    14px 28px;
+
+  border-radius:
+    10px;
+
+  text-decoration:
+    none;
+
+  border:
+    none;
+
+  font-weight:
+    600;
+
+  font-size:
+    15px;
+
+  letter-spacing:
+    0.2px;
+
+  box-shadow:
+    0 7px 20px
+    rgba(198, 156, 109, 0.20);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+
+.btn-primary:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 28px
+    rgba(198, 156, 109, 0.28);
+
+}
+
+
+/* =========================================================
+   CATÁLOGO
+========================================================= */
+
+.catalogo {
+
+  padding:
+    120px 0 130px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffafd 0%,
+      #ffffff 100%
+    );
+
+}
+
+
+/* =========================================================
+   ENCABEZADO DE SECCIÓN
+========================================================= */
+
+.section-heading {
+
+  text-align:
+    center;
+
+  max-width:
+    720px;
+
+  margin:
+    0 auto 60px;
+
+}
+
+
+/* Texto pequeño */
+
+.section-tag {
+
+  display:
+    block;
+
+  margin-bottom:
+    14px;
+
+  color:
+    var(--gold);
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    3px;
+
+}
+
+
+/* Título de sección */
+
+.section-title {
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    36px;
+
+  margin:
+    0 0 16px;
+
+  color:
+    var(--text);
+
+  letter-spacing:
+    0.3px;
+
+}
+
+
+/* Subtítulo */
+
+.subtitle {
+
+  color:
+    var(--muted);
+
+  font-size:
+    16px;
+
+  line-height:
+    1.7;
+
+  max-width:
+    600px;
+
+  margin:
+    0 auto;
+
+}
+
+
+/* =========================================================
+   GRID DE PRODUCTOS
+========================================================= */
+
+.grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(250px, 1fr)
+    );
+
+  gap:
+    32px;
+
+}
+
+
+/* =========================================================
+   TARJETAS DE PRODUCTOS
+========================================================= */
+
+.card {
+
+  background:
+    var(--card-bg);
+
+  border-radius:
+    18px;
+
+  overflow:
+    hidden;
+
+  box-shadow:
+    0 5px 20px
+    rgba(74, 45, 47, 0.07);
+
+  border:
+    1px solid
+    rgba(198, 156, 109, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+/* Efecto al pasar el mouse */
+
+.card:hover {
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 16px 35px
+    rgba(74, 45, 47, 0.13);
+
+}
+
+
+/* =========================================================
+   IMAGEN DE PRODUCTO
+========================================================= */
+
+.card img {
+
+  width:
+    100%;
+
+  height:
+    260px;
+
+  object-fit:
+    contain;
+
+  background:
+    #ffffff;
+
+  padding:
+    22px;
+
+  display:
+    block;
+
+}
+
+
+/* =========================================================
+   INFORMACIÓN DE PRODUCTO
+========================================================= */
+
+.card-body {
+
+  padding:
+    22px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    7px;
+
+}
+
+
+/* Nombre */
+
+.card-body h3 {
+
+  font-size:
+    17px;
+
+  line-height:
+    1.4;
+
+  font-weight:
+    700;
+
+  color:
+    var(--text);
+
+}
+
+
+/* Tamaño */
+
+.size {
+
+  color:
+    #927777;
+
+  font-size:
+    13px;
+
+  letter-spacing:
+    0.3px;
+
+}
+
+
+/* Precio */
+
+.price {
+
+  color:
+    var(--gold);
+
+  font-weight:
+    700;
+
+  font-size:
+    18px;
+
+  margin-top:
+    5px;
+
+}
+
+
+/* Descripción */
+
+.desc {
+
+  color:
+    var(--muted);
+
+  font-size:
+    14px;
+
+  line-height:
+    1.55;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+  padding:
+    32px 0;
+
+  background:
+    #fff8fb;
+
+  color:
+    var(--muted);
+
+  border-top:
+    1px solid
+    rgba(74, 45, 47, 0.07);
+
+}
+
+
+/* =========================================================
+   FOOTER GRID
+========================================================= */
+
+.footer-grid {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    25px;
+
+}
+
+
+/* Texto */
+
+.footer-grid p {
+
+  font-size:
+    13px;
+
+  line-height:
+    1.6;
+
+}
+
+
+/* Enlaces */
+
+.footer-grid a {
+
+  color:
+    var(--muted);
+
+  text-decoration:
+    none;
+
+  margin-left:
+    18px;
+
+  font-size:
+    14px;
+
+  transition:
+    color 0.3s ease;
+
+}
+
+
+.footer-grid a:hover {
+
+  color:
+    var(--gold);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   TABLETS GRANDES
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .header-container {
+
+    gap:
+      30px;
+
+  }
+
+
+  .logo {
+
+    font-size:
+      31px;
+
+  }
+
+
+  .nav {
+
+    gap:
+      17px;
+
+  }
+
+
+  .nav a {
+
+    font-size:
+      13px;
+
+  }
+
+
+  .hero-grid {
+
+    grid-template-columns:
+      1fr 400px;
+
+    gap:
+      50px;
+
+  }
+
+
+  .hero-content h1 {
+
+    font-size:
+      45px;
+
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* HEADER */
+
+  .header-container {
+
+    flex-direction:
+      column;
+
+    min-height:
+      auto;
+
+    padding-top:
+      22px;
+
+    padding-bottom:
+      20px;
+
+    gap:
+      20px;
+
+  }
+
+
+  .logo {
+
+    font-size:
+      34px;
+
+  }
+
+
+  /* NAV */
+
+  .nav {
+
+    width:
+      100%;
+
+    overflow-x:
+      auto;
+
+    justify-content:
+      flex-start;
+
+    gap:
+      22px;
+
+    padding:
+      5px 5px 10px;
+
+    scrollbar-width:
+      thin;
+
+  }
+
+
+  .nav a {
+
+    flex:
+      0 0 auto;
+
+    font-size:
+      14px;
+
+  }
+
+
+  /* HERO */
+
+  .hero {
+
+    padding:
+      80px 0 100px;
+
+  }
+
+
+  .hero-grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      55px;
+
+    text-align:
+      center;
+
+  }
+
+
+  .hero-content {
+
+    max-width:
+      700px;
+
+    margin:
+      auto;
+
+  }
+
+
+  .hero-content p {
+
+    margin-left:
+      auto;
+
+    margin-right:
+      auto;
+
+  }
+
+
+  .hero-image {
+
+    max-width:
+      520px;
+
+    margin:
+      auto;
+
+  }
+
+
+  /* CATÁLOGO */
+
+  .catalogo {
+
+    padding:
+      90px 0 100px;
+
+  }
+
+
+  /* GRID */
+
+  .grid {
+
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   CELULARES
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* CONTENEDOR */
+
+  .container {
+
+    padding:
+      0 20px;
+
+  }
+
+
+  /* HEADER */
+
+  .header-container {
+
+    padding-top:
+      20px;
+
+    padding-bottom:
+      18px;
+
+  }
+
+
+  .logo {
+
+    font-size:
+      29px;
+
+    letter-spacing:
+      1px;
+
+  }
+
+
+  /* NAV */
+
+  .nav {
+
+    gap:
+      20px;
+
+  }
+
+
+  .nav a {
+
+    font-size:
+      13px;
+
+  }
+
+
+  /* HERO */
+
+  .hero {
+
+    padding:
+      65px 0 85px;
+
+  }
+
+
+  .hero-tag {
+
+    font-size:
+      11px;
+
+    letter-spacing:
+      2.5px;
+
+  }
+
+
+  .hero-content h1 {
+
+    font-size:
+      36px;
+
+    line-height:
+      1.2;
+
+  }
+
+
+  .hero-content p {
+
+    font-size:
+      15px;
+
+    line-height:
+      1.65;
+
+  }
+
+
+  .hero-image img {
+
+    border-radius:
+      16px;
+
+  }
+
+
+  /* CATÁLOGO */
+
+  .catalogo {
+
+    padding:
+      80px 0 90px;
+
+  }
+
+
+  /* ENCABEZADO */
+
+  .section-heading {
+
+    margin-bottom:
+      45px;
+
+  }
+
+
+  .section-tag {
+
+    font-size:
+      11px;
+
+    letter-spacing:
+      2.5px;
+
+  }
+
+
+  .section-title {
+
+    font-size:
+      30px;
+
+  }
+
+
+  .subtitle {
+
+    font-size:
+      15px;
+
+  }
+
+
+  /* GRID */
+
+  .grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      25px;
+
+  }
+
+
+  /* TARJETAS */
+
+  .card img {
+
+    height:
+      280px;
+
+  }
+
+
+  .card-body {
+
+    padding:
+      20px;
+
+  }
+
+
+  /* FOOTER */
+
+  .footer-grid {
+
+    flex-direction:
+      column;
+
+    text-align:
+      center;
+
+  }
+
+
+  .footer-grid a {
+
+    margin:
+      0 7px;
+
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .logo {
+
+    font-size:
+      26px;
+
+  }
+
+
+  .hero-content h1 {
+
+    font-size:
+      32px;
+
+  }
+
+
+  .section-title {
+
+    font-size:
+      27px;
+
+  }
+
+
+  .card img {
+
+    height:
+      250px;
+
+  }
+
+}
+
+
+/* =========================================================
+   ANIMACIÓN SUAVE
+========================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .hero-content,
+  .hero-image,
+  .section-heading,
+  .card {
+
+    animation:
+      fadeUp 0.7s ease both;
+
+  }
+
+
+  @keyframes fadeUp {
+
+    from {
+
+      opacity:
+        0;
+
+      transform:
+        translateY(15px);
+
+    }
+
+    to {
+
+      opacity:
+        1;
+
+      transform:
+        translateY(0);
+
+    }
+
+  }
+
+}
+
+
+
+/* =========================================================
+   MENÚ DESPLEGABLE - ACCESORIOS
+========================================================= */
+
+.menu-desplegable {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+/* Texto principal: Accesorios */
+
+.nav .menu-desplegable summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    list-style: none;
+    cursor: pointer;
+
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+
+    padding: 8px 0;
+
+    transition: color 0.3s ease;
+}
+
+/* Quitar marcador predeterminado */
+
+.nav .menu-desplegable summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Flecha desplegable */
+
+.nav .menu-desplegable summary::after {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-right: 1.5px solid var(--gold);
+    border-bottom: 1.5px solid var(--gold);
+
+    transform: rotate(45deg);
+
+    margin-top: -4px;
+
+    transition: transform 0.3s ease;
+}
+
+/* Girar flecha cuando está abierto */
+
+.nav .menu-desplegable details[open] summary::after {
+    transform: rotate(225deg);
+    margin-top: 4px;
+}
+
+/* Efecto al pasar el mouse */
+
+.nav .menu-desplegable summary:hover {
+    color: var(--gold);
+}
+
+/* Línea dorada inferior */
+
+.nav .menu-desplegable summary::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -3px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: width 0.3s ease;
+}
+
+.nav .menu-desplegable summary:hover::before,
+.nav .menu-desplegable details[open] summary::before {
+    width: 100%;
+}
+
+/* =========================================================
+   SUBMENÚ ACCESORIOS
+========================================================= */
+
+.nav .submenu {
+
+    display: none;
+
+    position: absolute;
+
+    top: calc(100% + 12px);
+    left: -15px;
+
+    min-width: 170px;
+
+    background: var(--white);
+
+    padding: 8px;
+
+    margin: 0;
+
+    list-style: none;
+
+    border: 1px solid rgba(198, 156, 109, 0.20);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(74, 45, 47, 0.12);
+
+    z-index: 100;
+
+}
+
+/* Mostrar opciones */
+
+.nav .menu-desplegable details[open] .submenu {
+    display: block;
+}
+
+/* Opciones individuales */
+
+.nav .submenu li {
+    list-style: none;
+}
+
+/* Enlaces del submenú */
+
+.nav .submenu a {
+
+    display: block;
+
+    padding: 11px 14px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        padding-left 0.25s ease;
+
+}
+
+/* Eliminar línea dorada de los enlaces internos */
+
+.nav .submenu a::after {
+    display: none;
+}
+
+/* Hover de las opciones */
+
+.nav .submenu a:hover {
+
+    background: var(--rose-1);
+
+    color: var(--gold-dark);
+
+    padding-left: 19px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETAS Y CELULARES DESPLEGABLE ACCESORIOS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        overflow: visible;
+        flex-wrap: wrap;
+    }
+
+    .nav .menu-desplegable summary {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .nav {
+        overflow: visible;
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .nav .menu-desplegable {
+        position: relative;
+    }
+
+    .nav .submenu {
+        left: 0;
+        min-width: 155px;
+    }
+
+}
